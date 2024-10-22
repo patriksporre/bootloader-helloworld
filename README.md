@@ -6,8 +6,8 @@ This project was developed on macOS, but the instructions should be similar for 
 
 ## Prerequisites
 
-- **NASM (Netwide Assembler)**: For assembling the bootloader.
-- **QEMU**: To emulate the x86 environment and run the bootloader.
+- **NASM (Netwide Assembler)**: For assembling the bootloader
+- **QEMU**: To emulate the x86 environment and run the bootloader
 
 ### Installation
 
@@ -39,14 +39,14 @@ This project was developed on macOS, but the instructions should be similar for 
 
 ### Project Structure
 
-- `boot.asm`: The assembly code for the bootloader that prints `"Hello World"` to the screen.
-- `boot.bin`: The assembled bootloader binary that can be run in an x86 emulator.
+- `boot.asm`: The assembly code for the bootloader that prints `"Hello World"` to the screen
+- `boot.bin`: The assembled bootloader binary that can be run in an x86 emulator
 
 ### How It Works
 
-- The bootloader runs in **16-bit real mode** and is loaded by the BIOS at memory address `0x7C00`.
-- It uses BIOS interrupt `0x10` to print the characters of `"Hello World"` one by one to the screen.
-- The program halts the CPU after printing the message using the `hlt` instruction.
+- The bootloader runs in 16-bit real mode and is loaded by the BIOS at memory address `0x7c00`
+- It uses BIOS interrupt `0x10` to print the characters of `"Hello World"` one by one to the screen
+- The program halts the CPU after printing the message using the `hlt` instruction
 
 ### License
 
