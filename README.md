@@ -1,8 +1,11 @@
 # Bootloader - "Hello World" on x86 Architecture
 
-This project contains a simple bootloader that prints `"Hello World"` to the screen when run on an x86 architecture. The bootloader is written in assembly language using NASM and is designed to run in 16-bit real mode.
+This project contains a simple bootloader written in **lean and mean assembly** without relying on any BIOS calls. It directly manipulates the video memory to clear the screen and display `"Hello World"` in VGA text mode. The bootloader runs on an x86 architecture in 16-bit real mode.
 
-This project was developed on macOS, but the instructions should be similar for other platforms such as Linux and Windows (with appropriate tools installed).
+## Author
+
+**Patrik Sporre**  
+Email: [patriksporre@gmail.com]()
 
 ## Prerequisites
 
