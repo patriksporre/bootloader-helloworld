@@ -16,10 +16,12 @@ This project was developed on macOS, but the instructions should be similar for 
 1. **Install NASM**:
    ```bash
    brew install nasm
+   ```
 
 2. **Install QEMU**:
    ```bash
    brew install qemu
+   ```
 
 ### How to Assemble and Run the Bootloader
 
@@ -28,12 +30,14 @@ This project was developed on macOS, but the instructions should be similar for 
 
    ```bash
    nasm -f bin boot.asm -o boot.bin
+   ```
 
 2. **Run the bootloader in QEMU**:
    Use QEMU to emulate an x86 system and load the bootloader binary (`boot.bin`).
 
    ```bash
-   qemu-system-x86_64 -drive format=raw,file=boot.bin```
+   qemu-system-x86_64 -drive format=raw,file=boot.bin
+   ```
 
    This will open a QEMU window, and you should see `"Hello World"` printed to the screen.
 
