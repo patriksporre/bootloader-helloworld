@@ -33,7 +33,7 @@ This project was developed on macOS, but the instructions should be similar for 
    Use QEMU to emulate an x86 system and load the bootloader binary (`boot.bin`).
 
    ```bash
-   qemu-system-x86_64 -drive format=raw,file=boot.bin
+   qemu-system-x86_64 -drive format=raw,file=boot.bin```
 
    This will open a QEMU window, and you should see `"Hello World"` printed to the screen.
 
