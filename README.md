@@ -5,7 +5,7 @@ This project contains a simple bootloader written in **lean and mean assembly** 
 ## Author
 
 **Patrik Sporre**  
-Email: [patriksporre@gmail.com]()
+Email: [patriksporre@gmail.com](patriksporre@gmail.com)
 
 ## Prerequisites
 
