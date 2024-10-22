@@ -9,10 +9,10 @@ start:
     mov cx, 2000            ; 80 characters wide and 25 characters tall
 
 clearscreen:
-    mov [es:di], 0x20       ; Write character (space character) to video memory at ES:DI
+    mov byte [es:di], 0x20       ; Write character (space character) to video memory at ES:DI
     inc di                  ; Move to next byte (the attribute)
 
-    mov [es:di], 0x07       ; Write attribute (light gray on black) to video memory at ES:DI
+    mov byte [es:di], 0x07       ; Write attribute (light gray on black) to video memory at ES:DI
     inc di                  ; Move to the next byte (the character)
 
     dec cx                  ; Decrement CX
