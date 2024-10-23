@@ -52,7 +52,8 @@ Email: [patriksporre@gmail.com](mailto:patriksporre@gmail.com)
 ### How It Works
 
 - The bootloader runs in 16-bit real mode and is loaded by the BIOS at memory address `0x7c00`
-- It uses BIOS interrupt `0x10` to print the characters of `"Hello World"` one by one to the screen
+- It operates directly with the video memory at location 0xb800, no BIOS interrupts are used
+- The screen is cleared and then prints the characters of `"Hello World"` one by one to the screen
 - The program halts the CPU after printing the message using the `hlt` instruction
 
 ### License
