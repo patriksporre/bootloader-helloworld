@@ -1,6 +1,10 @@
 # Bootloader - "Hello World" on x86 Architecture
 
-This project contains two simple bootloaders written in **lean and mean assembly**. Without relying on any BIOS calls, the two bootloaders directly manipulates the video memory to clear the screen and display `"Hello World"` in VGA text mode. The two different bootloaders runs on an x86 architecture in 16 bit real mode and 32 bit protected mode respectively.
+This project contains two simple bootloaders written in **lean and mean assembly**.
+
+Without relying on any BIOS calls, the two bootloaders directly manipulates the video memory to clear the screen and display `"Hello World"` in VGA text mode.
+
+The two different bootloaders runs on an x86 architecture in 16 bit real mode and 32 bit protected mode respectively.
 
 ## Author
 
@@ -29,7 +33,7 @@ Email: [patriksporre@gmail.com](mailto:patriksporre@gmail.com)
 ### How to Assemble and Run the Bootloader
 
 1. **Assemble the bootloader**:
-   Use NASM to convert the assembly source files (`boot.asm` and `boot-pmode.asm`) into a binary file that can be run as a bootloader.
+   Use NASM to convert the assembly source files (`boot.asm` and `boot-pmode.asm`) into a binary files that can be run as bootloaders.
 
    ```bash
    nasm -f bin boot.asm -o boot.bin
@@ -54,12 +58,12 @@ Email: [patriksporre@gmail.com](mailto:patriksporre@gmail.com)
 
 ### Project Structure
 
-- `boot.asm`: The assembly code for the 16 bit real mode bootloader that prints `"Hello World"` to the screen
-- `boot-pmode.asm`: The assembly code for the 32 bit protected mode bootloader that prints `"Hello World"` to the screen
+- `boot.asm`: The assembly code for the 16 bit real mode bootloader that prints `"Hello World"`
+- `boot-pmode.asm`: The assembly code for the 32 bit protected mode bootloader that prints `"Hello World"`
 
 ### How It Works
 
-- The bootloader runs in 16-bit real mode and is loaded by the BIOS at memory address `0x7c00`
+- The bootloader starts in 16-bit real mode and is loaded by the BIOS at memory address `0x7c00`
 - It operates directly with the video memory at location 0xb800, no BIOS interrupts are used
 - The screen is cleared and then prints the characters of `"Hello World"` one by one to the top left of the screen
 - The program halts the CPU after printing the message using the `hlt` instruction
