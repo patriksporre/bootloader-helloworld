@@ -41,5 +41,5 @@ end:
 
 message db 'Hello World', 0 ; The 'Hello World' message followed by a null terminator (0)
 
-times 510-($-$$) db 0       ; Pad the boot sector to 510 bytes (ensuring the total size is 512 bytes)
-dw 0xAA55                   ; Boot sector signature (0xAA55), required for a valid bootable sector
+    times 510-($-$$) db 0   ; Pad the boot sector to 510 bytes (ensuring the total size is 512 bytes)
+    dw 0xAA55               ; Boot sector signature (0xAA55), required for a valid bootable sector
