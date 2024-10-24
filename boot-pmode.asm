@@ -90,5 +90,6 @@ gdt_descriptor:
     dw gdt_end-gdt_start-1  ; GDT size (size - 1)
     dd gdt_start            ; GDT base address
 
+; Boot sector padding and signature
     times 510-($-$$) db 0   ; Pad the boot sector to 510 bytes (ensuring the total size is 512 bytes)
     dw 0xAA55               ; Boot sector signature (0xAA55), required for a valid bootable sector
