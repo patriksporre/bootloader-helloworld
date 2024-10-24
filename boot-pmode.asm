@@ -19,11 +19,11 @@ BITS 32                     ; Instruct NASM that this is 32 bit (protected mode)
 _start:
     ; Setup segment registers for protected mode
     mov ax, 0x10            ; Data segment selector (0x10 (2 x 8) is the GDT data segment selector)
-    mov ds, ax              ; Load DS
-    mov es, ax              ; Load ES
-    mov fs, ax              ; Load FS
-    mov gs, ax              ; Load GS
-    mov ss, ax              ; Load SS
+    mov ds, ax              ; Load DS (mandatory, needed for data access)
+    mov es, ax              ; Load ES (optional, but used for string operations)
+    mov fs, ax              ; Load FS (optional)
+    mov gs, ax              ; Load GS (optional)
+    mov ss, ax              ; Load SS (mandatory, needed for the stack)
     mov esp, 0x90000        ; Set up the stack (grows down from 0x90000)
 
     mov edi, 0xb8000        ; Set EDI to the video memory segment (0xb8000)
